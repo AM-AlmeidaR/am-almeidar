@@ -1,0 +1,25 @@
+@mixin breakpoint($bp) {
+  @if $bp ==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $bp ==tablet-horizontal {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $bp ==desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $bp ==desktop-xl {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+}

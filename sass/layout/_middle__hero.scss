@@ -1,0 +1,160 @@
+@use '../abstracts/abstracts' as *;
+@use '../base/reset' as rs;
+@use '../abstracts/mixins' as mixins;
+
+.middle__hero{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $black;
+    color: white;
+    font-family: $font;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    margin-top: -1px;
+
+    &__lenguages{
+        display: grid;
+        justify-items: center;
+        position: relative;
+        @include mixins.breakpoint(tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "item1 item2"
+                "item3 item4"
+                "item5 item6";
+            gap: 10px;
+            text-align: left;
+            padding-left: 32px;
+            padding-right: 32px;
+            
+            &--item1 {
+                grid-area: item1;
+            }
+            
+            &--item2 {
+                grid-area: item2;
+            }
+            
+            &--item3 {
+                grid-area: item3;
+            }
+        
+            &--item4 {
+                grid-area: item4;
+            }
+        
+            &--item5 {
+                grid-area: item5;
+            }
+        
+            &--item6 {
+                grid-area: item6;
+            }
+        }
+
+        @include mixins.breakpoint(desktop) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "item1 item2 item3"
+                "item4 item5 item6";
+                        
+                gap: 10px;
+                text-align: left;
+                padding-left: 132px;
+                padding-right: 132px;
+        }
+
+        &--item1,
+        &--item2,
+        &--item3,
+        &--item4,
+        &--item5,
+        &--item6 {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-bottom: 24px;
+            @include mixins.breakpoint(tablet) {
+                margin-left: 0;
+                text-align: left;
+            }
+        }
+
+        &--item2,
+        &--item4,
+        &--item6 {
+            @include mixins.breakpoint(tablet) {
+                margin-left: -50px;
+            }
+        }
+
+        &--item1,
+        &--item2,
+        &--item3,
+        &--item4,
+        &--item5,
+        &--item6 {
+            @include mixins.breakpoint(desktop) {
+                margin-left: 25px;
+                text-align: left;
+            }
+        }
+
+        &--item3,
+        &--item6 {
+            @include mixins.breakpoint(desktop) {
+                margin-right: 150px;
+            }
+        }
+
+        &--item6 {
+            margin-bottom: 40px;
+            @include mixins.breakpoint(tablet) {
+                margin-bottom: 105px;
+            }
+        }
+
+        &--ovals {
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            @include mixins.breakpoint(tablet) {
+                right: 0;
+                bottom: 30px;
+            }
+
+            @include mixins.breakpoint(desktop) {
+                right: -10px;
+                bottom: 45px;
+            }
+        }
+
+        &--line2 {
+            background-color: white;
+            margin-right: auto;
+            margin-left: auto;
+            width: 90%;
+            height: 1px;
+            padding-left: 16px;
+            padding-right: 16px;
+            margin-bottom: 89px;
+            @include mixins.breakpoint(tablet) {
+                display: none;
+            }
+        }
+    }
+}
+
+.middle__hero__lenguages {
+    h2 {
+        @include mixins.breakpoint(tablet){ 
+            font-size: 48px;
+            line-height: 56px;
+            letter-spacing: -1.5px;
+            margin-bottom: 14px;
+        }
+    }
+}

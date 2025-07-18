@@ -1,0 +1,72 @@
+@use '../abstracts/abstracts' as *;
+@use '../base/reset' as rs;
+@use '../abstracts/mixins' as mixins;
+
+.bottom__hero {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    color: #2d2d2d;
+    font-family: $font;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mixins.breakpoint(tablet) {
+        margin-top: -1px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @include mixins.breakpoint(desktop) {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    h2 {
+        padding: 10px;
+        border-bottom: 2px solid $dark-grey;
+    }
+
+    &__list {
+        display: grid;
+        justify-items: center;
+        position: relative;
+        max-width: 400px;
+        
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+
+            img {
+                width: 100%;
+                height: auto;
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, 5);
+                padding: 10px;
+            }
+
+            p {
+                font-family: $font;
+                font-weight: 500;
+                font-size: 1.2rem;
+                line-height: 1.5;
+                color: $dark-grey;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            h3 {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+

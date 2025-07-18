@@ -1,0 +1,220 @@
+@use '../abstracts/abstracts' as *;
+@use '../base/reset' as rs;
+@use '../abstracts/mixins' as mixins;
+
+.hero {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    color: $dark-grey;
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    margin-top: -1px;
+    margin-bottom: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: $font;
+
+    &__title {
+        width: 100px;
+        height: 100px;
+        border: 3px solid red; // Solo bordes
+        transform: rotate(35deg); // Inclinación
+        position: absolute; // Para colocarlo como fondo
+        top: 55px;
+        right: -15px;
+        z-index: 1; // Por detrás del contenido
+    }
+
+    h1 {
+        color: #2d2d2d;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        z-index: 2;
+    }
+
+    span {
+        display: block;
+    }
+
+    h2 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: $dark-grey;
+        margin-top: 10px;
+        z-index: 2;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        color: darkgreen;
+        margin-top: 10px;
+        z-index: 2;
+    }
+
+    a {
+        text-decoration: none;
+        color: $green;
+        font-weight: 600;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        transition: color 0.4s ease-in-out;
+        border-bottom: 3px solid $green;
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px;
+        padding-bottom: 10px;
+        text-shadow: 1px 1px 2px rgb(21, 21, 21), -1px -1px 2px rgb(21, 21, 21), 1px -1px 2px rgb(21, 21, 21), -1px 1px 2px rgb(21, 21, 21);
+        z-index: 2;
+
+        &:hover {
+            color: $dark-grey;
+            border-bottom: 2px solid $dark-grey;
+            letter-spacing: 5px;
+            transform: scale(1.1);
+        }
+    }
+
+    &__about {
+        width: 100%;
+        height: auto;
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        margin-top: -1px;
+        z-index: 2;
+
+        .tilted-square {
+            width: 170px;
+            height: 170px;
+            border: 5px solid $green; // Solo bordes
+            transform: rotate(60deg); // Inclinación
+            position: absolute; // Para colocarlo como fondo
+            top: 530px;
+            left: 50px;
+            z-index: 1; // Por detrás del contenido
+        }
+
+        .tilted-square2 {
+            width: 150px;
+            height: 150px;
+            border: 7px solid darkorange; // Solo bordes
+            transform: rotate(40deg); // Inclinación
+            position: absolute; // Para colocarlo como fondo
+            top: 620px;
+            left: 140px;
+            z-index: 1; // Por detrás del contenido
+        }
+
+        h2 {
+            font-size: 50px;
+            color: $dark-grey;
+            margin-bottom: 30px;
+            font-family: $font;
+            border-bottom: 5px solid $dark-grey;
+            z-index: 4;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            z-index: 2;
+
+            li {
+                font-family: $font;
+                font-size: 2.2rem;
+                color: $dark-grey;
+                line-height: 1.5;
+                text-shadow: 1px 1px 2px rgb(21, 21, 21), -1px -1px 2px rgb(21, 21, 21), 1px -1px 2px rgb(21, 21, 21), -1px 1px 2px rgb(21, 21, 21);
+                transition: color 0.3s ease-in-out;
+                z-index: 5;
+                &:hover {
+                    color: $green;
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .tilted-square4 {
+            width: 130px;
+            height: 130px;
+            border: 5px solid rgb(135, 206, 250); // Solo bordes
+            transform: rotate(30deg); // Inclinación
+            position: absolute; // Para colocarlo como fondo
+            top: 925px;
+            right: 110px;
+            z-index: 1; // Por detrás del contenido
+        }
+
+        &__contact {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            
+
+            a {
+                width: 100%;
+                text-decoration: none;
+                color: $green;
+                font-family: $font;
+                font-weight: 600;
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                transition: color 0.4s ease-in-out;
+                border-bottom: 3px solid $green;
+                display: flex;
+                justify-content: flex-end;
+                margin: 20px;
+                padding-bottom: 10px;
+                text-shadow: 1px 1px 2px rgb(21, 21, 21), -1px -1px 2px rgb(21, 21, 21), 1px -1px 2px rgb(21, 21, 21), -1px 1px 2px rgb(21, 21, 21);
+                z-index: 2;
+                
+                &:hover {
+                    color: $dark-grey;
+                    border-bottom: 2px solid $dark-grey;
+                    letter-spacing: 5px;
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        &__text {
+            max-width: 400px;
+            text-align: left;
+            background-color: white;
+            border-top-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+            padding: 20px;
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 5);
+            margin-bottom: 20px;
+            transition: color 0.4s ease-in-out;
+
+            p {
+                font-family: $font;
+                font-weight: 500;
+                font-size: 19px;
+                line-height: 1.5;
+                color: $dark-grey;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}   
