@@ -5,7 +5,7 @@
 .bottom__hero {
     margin-left: auto;
     margin-right: auto;
-    background-color: beige;
+    background-color: #FDFDEB;
     color: #2d2d2d;
     font-family: $font;
     overflow: hidden;
@@ -31,6 +31,16 @@
     h2 {
         padding: 10px;
         border-bottom: 2px solid $dark-grey;
+
+        @include mixins.breakpoint(tablet) {
+            font-size: 35px;
+        }
+
+        @include mixins.breakpoint(desktop) {
+            padding-left: 200px;
+            padding-right: 200px;
+            font-size: 45px;
+        }
     }
 
     &__list {
@@ -38,12 +48,35 @@
         justify-items: center;
         position: relative;
         max-width: 400px;
+
+        @include mixins.breakpoint(tablet) {
+           
+            gap: 20px;
+            max-width: 800px;
+        }
         
-        &-item {
+        @include mixins.breakpoint(desktop) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+        }
+        
+        .item1, 
+        .item2, 
+        .item3, 
+        .item4 {
             display: flex;
             flex-direction: column;
             align-items: center;
             max-width: 400px;
+
+            @include mixins.breakpoint(tablet) {
+                max-width: 600px;
+            }
+
+            @include mixins.breakpoint(desktop) {
+                max-width: 800px;
+            }
 
             img {
                 width: 100%;
@@ -64,6 +97,10 @@
 
             h3 {
                 padding: 10px;
+
+                @include mixins.breakpoint(tablet) {
+                    font-size: 24px;
+                }
             }
         }
     }

@@ -6,10 +6,91 @@
     margin-top: 0;
     width: 100%;
     height: auto;
-    background-color: beige;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: #FDFDEB;
+    padding: 20px;
+
+    @include mixins.breakpoint(tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     
+    &__logo {
+        width: 250px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0;
+        z-index: 2;
+
+        @include mixins.breakpoint(tablet) {
+            width: 400px;
+            padding-left: 25px;
+        }
+
+        @include mixins.breakpoint(desktop) {
+            padding-left: 135px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 4px 4px 8px rgb(0, 0, 0);
+            //clip-path: ellipse(50% 50% at 50% 50%);
+            &:hover {
+                transform: scale(1.1);
+            }     
+        }
+    }
+
+    &__nav1 {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 20px;
+
+        @include mixins.breakpoint(tablet) {
+            padding-left: inherit;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+
+            @include mixins.breakpoint(tablet) {
+                padding-left: 60px;
+            }
+
+            li {
+                font-size: 1.2rem;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+                padding-bottom: 20px;
+                text-decoration: underline;
+
+                &:hover {
+                    transform: scale(1.2);
+                    color: $green;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #333;
+                    font-family: $font;
+
+                    
+                }
+            }
+        }
+    }
 
     &__nav {
         width: 100%;
@@ -21,24 +102,13 @@
         list-style: none;
         gap: 15px;
 
-        &__logo {
-            width: 300px;
-            height: auto;
-            margin-left: auto;
-            margin-right: auto;
-            padding-top: 20px;
-            z-index: 2;
-
-            img {
-                width: 100%;
-                height: auto;
-                transition: transform 0.3s ease-in-out;
-                clip-path: ellipse(50% 50% at 50% 50%);
-                &:hover {
-                    transform: scale(1.1);
-                }
-                
-            }
+        @include mixins.breakpoint(tablet) {
+            flex-direction: row;
+        }
+        
+        @include mixins.breakpoint(desktop) {
+            width: 90%;
+            padding-right: 0px;
         }
         
         ul {
@@ -52,9 +122,13 @@
             margin-right: auto;
             margin-left: auto;
             padding-right: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 0;
             z-index: 2;
             text-decoration: none;
+
+            @include mixins.breakpoint(tablet) {
+                gap: 40px;
+            }
 
             li {
                 font-size: 1.2rem;

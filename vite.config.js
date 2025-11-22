@@ -1,14 +1,24 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import htmlInject from 'vite-plugin-html-inject'
 
 export default defineConfig({
-    base: '/am-almeidar/', // nombre EXACTO del repo
-    build: {
-        rollupOptions: {
-            input: {
-                main: resolve(__dirname, 'index.html'),
-                tools_trail: resolve(__dirname, 'tools_trail.html') // segundo HTML
-            }
-        }
+  plugins: [
+    htmlInject({
+      verbose: true,   // 👉 TE MUESTRA EN CONSOLA SI LOS INCLUDES SE CARGAN
+    })
+  ],
+
+  base: '/am-almeidar/',
+
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        tools_trail: resolve(__dirname, 'tools_trail.html')
+      }
     }
+  }
 })
+
+
