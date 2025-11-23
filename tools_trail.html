@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AM-AlmeidaR Portfolio | Tools Trail</title>
     <meta name="description" content="Alberto Almeida Portfolio - Desarrollador Web FullSatck" />
@@ -17,31 +16,37 @@
   <div id="header-placeholder"></div>
     <main>
         <section class="hero">
-          <div class="hero__title_text"></div>
+          <div class="hero__title__text">
             <h1>From<span> Your Ideas, </span><span>Our Working Code</span></h1>
-            <h2>Passionate about making things work<h2>                
+            <h2>Passionate about making things work</h2>    
+          </div>
+          <div class="hero__title__img-toolstrail">
+            <img style="width: 100%; aspect-ratio: 448/254" src="img/toolstrail.png" alt="Tools Trail" />
           </div>
         </section>
         <section class="hero__explanation">
-          <h3>Tools Trail Explanation</h3>
+          <h3 id="projects">Tools Trail Explanation</h3>
           <article class="hero__explanation__article">
-              <div class="hero__explanation__text">
+            <div class="hero__explanation__article__text">
                   <p>This section provides a comprehensive overview of the Web App Tools Trail's functionality, current features, and future capabilities.</p>
                   <h5>Home</h5>
                   <p>The main landing page provides an introductory overview of the platform, showcasing all available navigation buttons and key features. Additionally, we offer the option to implement a comprehensive login and password authentication system based on client requirements.</p>
               </div>
               <figure class="hero__explanation__image">
-                <img src="/img/1.jpg" alt="Home Page" loading="lazy"/>
+                <img src="/img/1.jpg" alt="Home Page" />
               </figure>
           </article>
-            <div class="hero__explanation__text">
+          <article class="hero__explanation__article">
+            <div class="hero__explanation__article__text">
                 <h5>Available Tools</h5>
                 <p>This page presents the available tools in alphabetical order, making it easy to quickly find the required tool. Once the specific tool is located, copy (or memorize) its code and move to the "Assign Tool" page</p>
                 <figure class="hero__explanation__image">
                     <img src="/img/2.jpg" alt="Home Page" />
                 </figure>
             </div>
-            <div class="hero__explanation__text">
+          </article>
+          <article class="hero__explanation__article">
+            <div class="hero__explanation__article__text">
                 <h5>Assign Tool</h5>
                 <p>This section facilitates the assignment process by allowing users to input the tool code, select the recipient operator, and capture the operator's signature as confirmation of tool receipt. The signature functionality can be customized with a default signature or removed based on client specifications.</p>
                 <p>After executing the assignment (via the "Assign Tool" button positioned below the signature field), the application navigates back to the "Available Tools" page and shows a success message: "Tool code 'x' has been assigned to operator 'y'."</p>
@@ -49,28 +54,35 @@
                     <img src="/img/3.jpg" alt="Home Page" loading="lazy"/>
                 </figure>
             </div>
-            <div class="hero__explanation__text">
+          </article>
+          <article class="hero__explanation__article">
+            <div class="hero__explanation__article__text">
                 <h5>Assigned Tools</h5>
                 <p>This tab facilitates the tool return process. It presents a detailed listing of all assigned tools, including withdrawal timestamps and operator assignments. Tool returns are executed via the "Return" button. The interface updates dynamically, removing the returned item from the list and displaying the confirmation: "The tool is now available again."</p>
                 <figure class="hero__explanation__image">
                     <img src="/img/4.jpg" alt="Home Page" loading="lazy"/>
                 </figure>
             </div>
-            <div class="hero__explanation__text">
+          </article>
+          <article class="hero__explanation__article">
+            <div class="hero__explanation__article__text">
                 <h5>History</h5>
                 <p>This section provides a comprehensive log of all tool movements, including withdrawal and return timestamps, user assignments, and current status indicators. Tools still in use display no return date. For optimal performance, we recommend implementing periodic history backups (monthly basis) to maintain database efficiency and facilitate tool flow monitoring and control.</p>
                 <figure class="hero__explanation__image">
                     <img src="/img/5.jpg" alt="Home Page" loading="lazy"/>
                 </figure>
             </div>
-            <div class="hero__explanation__text">
+          </article>
+          <article class="hero__explanation__article">
+            <div class="hero__explanation__article__text">
                 <h5>Admin</h5>
                 <p>This administrative module enables comprehensive system management, including tool and operator registration/removal, and temporary status modification for tools undergoing repair or maintenance. Access is restricted to authenticated superusers who possess full administrative privileges, including the ability to configure other users credentials and define access permissions for various management functions.</p>
                 <figure class="hero__explanation__image">
                     <img src="/img/6.jpg" alt="Home Page" loading="lazy"/>
                 </figure>
-                <p>If you require additional information or wish to proceed with the acquisition of our Web App, please contact us directly. We monitor all incoming messages and ensure prompt responses within our operational capacity.</p>
+                <p>If you require additional information, personalize or wish to proceed with the acquisition of our Web App, please contact us directly. We monitor all incoming messages and ensure prompt responses within our operational capacity.</p>
             </div>
+          </article>
         </section>
 
     </main>

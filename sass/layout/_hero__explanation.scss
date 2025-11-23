@@ -1,3 +1,7 @@
+@use '../abstracts/abstracts' as *;
+@use '../base/reset' as rs;
+@use '../abstracts/mixins' as mixins;
+
 .hero__explanation {
     width: 100%;
     height: auto;
@@ -12,7 +16,29 @@
     font-family: $font;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    @include mixins.breakpoint (tablet) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @include mixins.breakpoint (desktop) {
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.2;
+        color: darkgreen;
+        text-decoration: underline;
+        margin-top: 10px;
+        z-index: 2;
+        margin-bottom: 1rem;
+    }
 
     &__article {
         
@@ -26,6 +52,10 @@
                 font-weight: 500;
                 margin: 0;
                 padding-bottom: 10px;
+                margin-right: auto;
+                margin-left: auto;
+                display: flex;
+                justify-content: center;
             }
     
             p {
@@ -38,16 +68,6 @@
         }
     }
 
-    h3 {
-        font-weight: 700;
-        font-size: 1.2rem;
-        line-height: 1.2;
-        color: darkgreen;
-        margin-top: 10px;
-        z-index: 2;
-    }
-
-
     &__image {
         display: flex;
         flex-direction: row;
@@ -55,6 +75,16 @@
         align-items: center;
         max-width: 400px;
         margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+
+        @include mixins.breakpoint (tablet) {
+            max-width: 600px;
+        }
+        
+        @include mixins.breakpoint (desktop) {
+            max-width: 800px;
+        }
 
         img {
             width: 100%;
@@ -64,3 +94,4 @@
         }
     }
 }
+
