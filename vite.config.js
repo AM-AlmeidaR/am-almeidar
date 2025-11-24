@@ -5,7 +5,7 @@ import htmlInject from 'vite-plugin-html-inject'
 export default defineConfig({
   plugins: [
     htmlInject({
-      verbose: true,   // 👉 TE MUESTRA EN CONSOLA SI LOS INCLUDES SE CARGAN
+      verbose: true,   // MUESTRA EN CONSOLA SI LOS INCLUDES SE CARGAN
     })
   ],
 
