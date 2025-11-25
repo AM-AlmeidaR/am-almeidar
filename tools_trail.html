@@ -10,13 +10,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/am-almeidar/assets/main-BPZh5OGH.js"></script>
-    <link rel="stylesheet" crossorigin href="/am-almeidar/assets/main-Bfp5lCd7.css">
+    <script type="module" crossorigin src="/am-almeidar/assets/main-BhwSuqsl.js"></script>
+    <link rel="stylesheet" crossorigin href="/am-almeidar/assets/main-CAKsBPNT.css">
   </head>
   <body>
 
-    <!-- inject:partials/header.html -->
-    <!-- endinject -->
+    <header class="header">
+
+      <div class="header__logo">
+        <a href="#home"><img src="/am-almeidar/assets/logo-amcode-Ju5yqtt0.jpeg" alt="Logo"/></a>
+      </div>
+
+      <nav class="header__nav1">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tools_trail.html">Tools Trail</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+
+      <nav class="header__nav">
+        <ul class="social-links">
+          <li>
+            <a href="mailto:denihiv@gmail.com">
+              <img src="/am-almeidar/assets/blue-mail-arrow-THARcuKd.png" alt="home" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/AM-AlmeidaR"
+            target="_blank"
+            rel="noopener noreferrer">
+              <img src="data:image/svg+xml,%3csvg%20width='98'%20height='96'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M48.854%200C21.839%200%200%2022%200%2049.217c0%2021.756%2013.993%2040.172%2033.405%2046.69%202.427.49%203.316-1.059%203.316-2.362%200-1.141-.08-5.052-.08-9.127-13.59%202.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015%204.934.326%207.523%205.052%207.523%205.052%204.367%207.496%2011.404%205.378%2014.235%204.074.404-3.178%201.699-5.378%203.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283%200-5.378%201.94-9.778%205.014-13.2-.485-1.222-2.184-6.275.486-13.038%200%200%204.125-1.304%2013.426%205.052a46.97%2046.97%200%200%201%2012.214-1.63c4.125%200%208.33.571%2012.213%201.63%209.302-6.356%2013.427-5.052%2013.427-5.052%202.67%206.763.97%2011.816.485%2013.038%203.155%203.422%205.015%207.822%205.015%2013.2%200%2018.905-11.404%2023.06-22.324%2024.283%201.78%201.548%203.316%204.481%203.316%209.126%200%206.6-.08%2011.897-.08%2013.526%200%201.304.89%202.853%203.316%202.364%2019.412-6.52%2033.405-24.935%2033.405-46.691C97.707%2022%2075.788%200%2048.854%200z'%20fill='%2324292f'/%3e%3c/svg%3e" alt="GitHub" />
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/34664670342" 
+            target="_blank"
+            rel="noopener noreferrer">
+              <img class="whatsapp" src="/am-almeidar/assets/whatsapp-icon-NBtPfGVa.png" alt="WhatsApp" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
         <section class="hero">
@@ -26,6 +62,11 @@
           </div>
           <div class="hero__title__img-toolstrail">
             <img style="width: 100%; aspect-ratio: 448/254" src="/am-almeidar/assets/toolstrail-CA0rdbeW.png" alt="Tools Trail" />
+          </div>
+        </section>
+        <section class="hero__about">
+          <div class="hero__about__contact">
+            <a href="mailto:denihiv@gmail.com" class="button">Contact me</a>
           </div>
         </section>
         <section class="hero__explanation">
@@ -70,7 +111,7 @@
           </article>
           <article class="hero__explanation__article">
             <div class="hero__explanation__article__text">
-                <h5>History</h5>
+                <h5>Record</h5>
                 <p>This section provides a comprehensive log of all tool movements, including withdrawal and return timestamps, user assignments, and current status indicators. Tools still in use display no return date. For optimal performance, we recommend implementing periodic history backups (monthly basis) to maintain database efficiency and facilitate tool flow monitoring and control.</p>
                 <figure class="hero__explanation__image">
                     <img src="/am-almeidar/assets/5-B6hbZpmF.jpg" alt="Home Page" loading="lazy"/>
@@ -91,7 +132,86 @@
 
     </main>
 
-    <!-- inject:partials/footer.html -->
-    <!-- endinject -->
-
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__main__line"></div>
+
+        <div class="footer__main__container">
+          <div class="footer__main__container__text">
+            <h3>Contact</h3>
+            <p>I would love to hear about your projects and how I could help. Please fill in the form, and I will contact you ASAP.</p>
+          </div>
+
+          <div class="footer__main__container__form">
+            <form novalidate>
+              <!-- NAME -->
+              <div class="form__group">
+                <input type="text" id="name" name="name" required placeholder=" " />
+                <label for="name">NAME</label>
+              </div>
+
+              <!-- EMAIL -->
+              <div class="form__group">
+                <input type="email" id="email" name="email" required placeholder=" " />
+                <label for="email">EMAIL</label>
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3ccircle%20cx='12'%20cy='12'%20r='11.5'%20stroke='%23FF6F5B'/%3e%3crect%20x='11'%20y='6'%20width='2'%20height='9'%20rx='1'%20fill='%23FF6F5B'/%3e%3crect%20x='11'%20y='17'%20width='2'%20height='2'%20rx='1'%20fill='%23FF6F5B'/%3e%3c/svg%3e" alt="warning" class="form__icon" />
+                <span class="form__error">Oops! invalid format here</span>
+              </div>
+
+              <!-- MESSAGE -->
+              <div class="form__group">
+                <textarea id="message" name="message" required placeholder=" "></textarea>
+                <label for="message">MESSAGE</label>
+              </div>
+
+              <!-- SEND BUTTON -->
+              <li class="form__submit">
+                <a href="mailto:denihiv@gmail.com" class="send">SEND MESSAGE</a>
+              </li>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__main__line"></div>
+
+        <div class="footer__main__media">
+          <figure>
+            <a href="#home"><img src="/am-almeidar/assets/logo-amcode-Ju5yqtt0.jpeg" alt="Logo"/></a> 
+          </figure>
+
+          <div class="footer__main__media__text">
+            <p>© 2025 AM Code.</p><p> All rights reserved.</p>
+            <p>Designed & Created by: </p>
+            <p><a href="mailto:denihiv@gmail.com">AM_AlmeidaR</a></p>
+          </div>
+
+          <nav class="header__nav">
+            <ul>
+              <li>
+                <a href="https://wa.me/34664670342" 
+                target="_blank"
+                rel="noopener noreferrer">
+                  <img class="whatsapp" src="/am-almeidar/assets/whatsapp-icon-NBtPfGVa.png" alt="WhatsApp" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/AM-AlmeidaR"
+                target="_blank"
+                rel="noopener noreferrer">
+                  <img src="data:image/svg+xml,%3csvg%20width='98'%20height='96'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M48.854%200C21.839%200%200%2022%200%2049.217c0%2021.756%2013.993%2040.172%2033.405%2046.69%202.427.49%203.316-1.059%203.316-2.362%200-1.141-.08-5.052-.08-9.127-13.59%202.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015%204.934.326%207.523%205.052%207.523%205.052%204.367%207.496%2011.404%205.378%2014.235%204.074.404-3.178%201.699-5.378%203.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283%200-5.378%201.94-9.778%205.014-13.2-.485-1.222-2.184-6.275.486-13.038%200%200%204.125-1.304%2013.426%205.052a46.97%2046.97%200%200%201%2012.214-1.63c4.125%200%208.33.571%2012.213%201.63%209.302-6.356%2013.427-5.052%2013.427-5.052%202.67%206.763.97%2011.816.485%2013.038%203.155%203.422%205.015%207.822%205.015%2013.2%200%2018.905-11.404%2023.06-22.324%2024.283%201.78%201.548%203.316%204.481%203.316%209.126%200%206.6-.08%2011.897-.08%2013.526%200%201.304.89%202.853%203.316%202.364%2019.412-6.52%2033.405-24.935%2033.405-46.691C97.707%2022%2075.788%200%2048.854%200z'%20fill='%2324292f'/%3e%3c/svg%3e" alt="GitHub" />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:denihiv@gmail.com"
+                rel="noopener noreferrer">
+                  <img src="/am-almeidar/assets/blue-mail-arrow-THARcuKd.png" alt="home" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
   </body>
+
