@@ -5,7 +5,7 @@
 .hero {
     margin-left: auto;
     margin-right: auto;
-    background-color: #FDFDEB;
+    background-color: #EEEEEE;
     color: $dark-grey;
     overflow: hidden;
     position: relative;
@@ -54,19 +54,19 @@
         right: -15px;
 
         @include mixins.breakpoint(tablet) {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 50px;
-            padding-bottom: 50px;
-            top: 320px;
-            right: 50px;
+            display: none;
         }
 
-        @include mixins.breakpoint(desktop) {
-            top: 320px;
-            right: 150px;
+        
+
+        &>img {
+            display: none;
+
+            @include mixins.breakpoint(tablet) {
+                display: flex;
+                width: 100px;
+                height: 100px;
+            }
         }
     }
         
@@ -107,11 +107,28 @@
 
         @include mixins.breakpoint(tablet) {
             font-size: 2.2rem;
+            padding-bottom: 30px;
         }
     }
 
-    
+    &__title__square-2 {
+        display: none;
+        
+        @include mixins.breakpoint(tablet) {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            position: absolute; // Para colocarlo como fondo
+            top: 6vh;
+            right: 35%;
+        }
 
+        @include mixins.breakpoint(desktop) {
+            width: 150px;
+            height: 150px;
+            
+        }
+    }
     /*a {
         text-decoration: none;
         color: $green;
@@ -138,7 +155,7 @@
     &__about {
         width: 100%;
         height: auto;
-        background-color: #FDFDEB;
+        background-color: #EEEEEE;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -159,12 +176,25 @@
             z-index: 1; // Por detrás del contenido
 
             @include mixins.breakpoint(tablet) {
-                left: 120px;
-                top: 980px;
+                left: 50%;
+                top: 1120px;
+                border: none;
+                transform: none;
             }
 
             @include mixins.breakpoint(desktop) {
-                top: 740px;
+                top: 700px;
+                left:auto;
+            }
+
+            &>img {
+                display: none;
+
+                @include mixins.breakpoint(tablet) {
+                    display: flex;
+                    width: 170px;
+                    height: 170px;
+                }
             }
         }
 
@@ -179,12 +209,24 @@
             z-index: 1; // Por detrás del contenido
 
             @include mixins.breakpoint(tablet) {
-                left: 200px;
-                top: 1050px;
+                left: 50px;
+                top: 1200px;
+                border: none;   // no muestra el borde del cuadrado
+                transform: none;
             }
 
             @include mixins.breakpoint(desktop) {
                 top: 825px;
+            }
+
+            &>img {
+                display: none;
+
+                @include mixins.breakpoint(tablet) {
+                    display: flex;
+                    width: 150px;
+                    height: 150px;
+                }
             }
         }
 
@@ -260,17 +302,34 @@
             border: 5px solid rgb(135, 206, 250); // Solo bordes
             transform: rotate(30deg); // Inclinación
             position: absolute; // Para colocarlo como fondo
-            top: 1150px;
-            right: 200px;
+            top: 1250px;
+            right: 150px;
             z-index: 1; // Por detrás del contenido
 
             @include mixins.breakpoint(tablet) {
-                top: 1340px;
-                right: 250px;
+                top: 1150px;
+                right: 50px;
+                border: none;
             }
 
             @include mixins.breakpoint(desktop) {
                 top: 880px;
+            }
+
+            &:hover {
+                @include mixins.breakpoint(tablet) {
+                border: none;
+                }
+            }
+
+            &>img {
+                display: none;
+
+                @include mixins.breakpoint(tablet) {
+                    display: flex;
+                    width: 130px;
+                    height: 130px;
+                }
             }
         }
 
@@ -279,7 +338,7 @@
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            
+            margin-top: 0px;
 
             a {
                 width: 100%;
@@ -315,7 +374,7 @@
 
             @include mixins.breakpoint(desktop) {
                     flex-direction: row;
-                    gap: 50px;
+                    gap: 100px;
                 }
 
             &--1, &--2 {                
