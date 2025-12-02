@@ -104,6 +104,7 @@
 
         @include mixins.breakpoint(tablet) {
             flex-direction: row;
+            max-width: 250px;
         }
         
         @include mixins.breakpoint(desktop) {

@@ -282,16 +282,56 @@
 
             li {
                 font-family: $font;
+                font-weight: 500;
                 font-size: 2.2rem;
                 color: $dark-grey;
                 line-height: 1.5;
-                text-shadow: 1px 1px 2px rgb(21, 21, 21), -1px -1px 2px rgb(21, 21, 21), 1px -1px 2px rgb(21, 21, 21), -1px 1px 2px rgb(21, 21, 21);
+                /*text-shadow: 1px 1px 2px rgb(21, 21, 21), -1px -1px 2px rgb(21, 21, 21), 1px -1px 2px rgb(21, 21, 21), -1px 1px 2px rgb(21, 21, 21);*/
                 transition: color 0.3s ease-in-out;
                 z-index: 5;
                 &:hover {
                     color: $green;
                     cursor: pointer;
                     transform: scale(1.1);
+                }
+            }
+        }
+
+        .tilted-square3 {
+            width: 120px;
+            height: 120px;
+            border: 5px solid gold; // Solo bordes
+            transform: rotate(10deg); // Inclinación
+            position: absolute; // Para colocarlo como fondo
+            top: 1300px;
+            left: 200px;
+            z-index: 1; // Por detrás del contenido
+
+            @include mixins.breakpoint(tablet) {
+                top: 800px;
+                left: 110px;
+                border: none;
+                width: 120px;
+                height: 120px;
+            }
+
+            @include mixins.breakpoint(desktop) {
+                top: 560px;
+                left: clamp(30px, (100vw - 1200px) * 0.3, 200px);
+            }
+
+            &>img {
+                display: none;
+
+                @include mixins.breakpoint(tablet) {
+                    display: flex;
+                    width: 120px;
+                    height: 120px;
+                }
+
+                @include mixins.breakpoint(tablet) {
+                    width: 150px;
+                    height: 150px;
                 }
             }
         }
@@ -329,6 +369,39 @@
                     display: flex;
                     width: 130px;
                     height: 130px;
+                }
+            }
+        }
+
+        .tilted-square5 {
+            width: 180px;
+            height: auto;
+            border: 5px solid rgb(93, 87, 59); // Solo bordes
+            transform: rotate(50deg); // Inclinación
+            position: absolute; // Para colocarlo como fondo
+            top: 1160px;
+            right: 200px;
+            z-index: 1; // Por detrás del contenido
+
+            @include mixins.breakpoint(tablet) {
+                top: 800px;
+                right: 55px;
+                border: none;
+                width:125px;
+            }
+
+            @include mixins.breakpoint(desktop) {
+                top: 560px;
+                right: clamp(0px, (100vw - 1200px) * 0.3, 200px);
+            }
+
+            &>img {
+                display: none;
+
+                @include mixins.breakpoint(tablet) {
+                    display: flex;
+                    width: 150px;
+                    height: 150px;
                 }
             }
         }
