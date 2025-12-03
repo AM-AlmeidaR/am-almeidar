@@ -13,6 +13,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include mixins.breakpoint(desktop) {
+        padding-left: 150px;
+        padding-right: 150px;
     }
     
     &__logo {
@@ -29,7 +36,7 @@
         }
 
         @include mixins.breakpoint(desktop) {
-            padding-left: 135px;
+            padding-left: 0px;
         }
 
         img {
@@ -54,9 +61,9 @@
         list-style: none;
         gap: 20px;
 
-        @include mixins.breakpoint(tablet) {
+        /*@include mixins.breakpoint(tablet) {
             padding-left: inherit;
-        }
+        }*/
 
         ul {
             display: flex;
