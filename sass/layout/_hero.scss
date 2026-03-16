@@ -7,7 +7,7 @@
     margin-right: auto;
     background-color: #EEEEEE;
     color: $dark-grey;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     max-width: 100%;
     margin-top: -1px;
@@ -74,10 +74,14 @@
             display: none;
             @include mixins.breakpoint(tablet) {
                 display: flex;
-                max-width: 254px;
-                max-height: 254px;
+                max-width: 438px;
+                max-height: 457px;
                 box-shadow: 12px 7px 10px 0px rgba(0, 0, 0, 0.5);
-                margin-right: 0px;
+                margin-right: 15px;
+            }
+
+            @include mixins.breakpoint(desktop) {
+                margin-right: 0;
             }
         }
 
@@ -90,6 +94,9 @@
 
         @include mixins.breakpoint(tablet) {
             font-size: 3.5rem;
+        }
+        @include mixins.breakpoint(desktop) {
+            font-size: 4.5rem;
         }
     }
 
@@ -120,7 +127,7 @@
             display: flex;
             position: absolute; // Para colocarlo como fondo
             top: 6vh;
-            right: 35%;
+            right: 42%;
         }
 
         @include mixins.breakpoint(desktop) {
